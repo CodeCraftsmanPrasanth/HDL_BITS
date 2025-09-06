@@ -1,9 +1,6 @@
-module top_module ( );
+module top_module ;
 	reg clk;
-    dut uut(.clk(clk));
+    dut a1(.clk(clk));
     always #5 clk=~clk;
-    initial begin
-        clk=0;
-        #100 $finish;
-    end
+    initial clk=0;
 endmodule
